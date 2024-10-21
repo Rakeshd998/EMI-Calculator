@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Rakeshd998/EMI-Calculator.git/static/css/main.9fa20124.css",
-    "main.js": "/Rakeshd998/EMI-Calculator.git/static/js/main.9e3c628c.js",
-    "static/js/453.ed3810f9.chunk.js": "/Rakeshd998/EMI-Calculator.git/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/Rakeshd998/EMI-Calculator.git/index.html",
-    "main.9fa20124.css.map": "/Rakeshd998/EMI-Calculator.git/static/css/main.9fa20124.css.map",
-    "main.9e3c628c.js.map": "/Rakeshd998/EMI-Calculator.git/static/js/main.9e3c628c.js.map",
-    "453.ed3810f9.chunk.js.map": "/Rakeshd998/EMI-Calculator.git/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/EMI-Calculator/static/css/main.9fa20124.css",
+    "main.js": "/EMI-Calculator/static/js/main.09279244.js",
+    "static/js/453.ed3810f9.chunk.js": "/EMI-Calculator/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/EMI-Calculator/index.html",
+    "main.9fa20124.css.map": "/EMI-Calculator/static/css/main.9fa20124.css.map",
+    "main.09279244.js.map": "/EMI-Calculator/static/js/main.09279244.js.map",
+    "453.ed3810f9.chunk.js.map": "/EMI-Calculator/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9fa20124.css",
-    "static/js/main.9e3c628c.js"
+    "static/js/main.09279244.js"
   ]
 }
