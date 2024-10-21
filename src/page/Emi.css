@@ -1,0 +1,32 @@
+label {
+    font-family: 'Merriweather', serif; /* Use Merriweather font */
+    color: #E0E0E0; /* Light gray text color */
+    font-weight: 600; /* Slightly bold text */
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Space between label and input */
+    font-size: 16px; /* Font size */
+  }
+  
+  /* Change label color on input focus */
+  input:focus + label,
+  textarea:focus + label {
+    color: #00FF85; /* Change color on focus */
+    transition: color 0.3s; /* Smooth transition */
+  }
+
+  .increasewidth{
+    width: 320px;
+  }
+
+  #rangeInput{
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  
+  /* Optional: Style for required labels */
+  label.required::after {
+    content: '*'; /* Add an asterisk after required labels */
+    color: #FF0000; /* Red color for asterisk */
+    margin-left: 4px; /* Space between label and asterisk */
+  }

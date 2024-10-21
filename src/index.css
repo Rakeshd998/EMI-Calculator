@@ -1,13 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+
+  font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1E2A38;
+  /* background-color:#2E2E2E; */
+
+}
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #FFFFFF;
+  /*Pure White for headers
+  /* Use Light Cyan for headers by uncommenting the next line */
+  /* color: #E0FFFF; */
+  margin-bottom: 16px;
 }
 
+p,
+label {
+  color: #E0E0E0
+}
+
+input {
+  background-color: #1C1C1C;
+  /* Dark gray input background */
+  color: #E0E0E0;
+  /* Light gray text */
+  border: 1px solid #00BFFF;
+  /* Neon Green border */
+  padding: 10px;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #A9A9A9;
+  /* Medium gray placeholder text */
+}
+
+/* Base button styles */
+button {
+  background-color: #00BFFF;
+  /* Neon Green background */
+  color: #ffffff;
+  /* White text color */
+  font-family: 'Merriweather', serif;
+  /* Use Merriweather font */
+  font-weight: 700;
+  /* Bold text */
+  padding: 10px 20px;
+  /* Padding for the button */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 16px;
+  /* Font size */
+  transition: background-color 0.3s, transform 0.2s;
+  /* Smooth transitions */
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #00B76A;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge button */
+}
+
+/* Focus effect */
+button:focus {
+  outline: none;
+  /* Remove default outline */
+  box-shadow: 0 0 0 2px rgba(0, 255, 133, 0.5);
+  /* Add a glow effect */
+}
+
+/* Disabled button styles */
+button:disabled {
+  background-color: #A9A9A9;
+  /* Gray background for disabled state */
+  color: #7F7F7F;
+  /* Darker gray text color */
+  cursor: not-allowed;
+  /* Not-allowed cursor */
+}
+
+/* Basic styles for the select element */
+/* Basic styles for the select element */
+select {
+  background-color: #1A1A1A;
+  /* Dark background */
+  color: #E0E0E0;
+  /* Light gray text color */
+  border: 1px solid #00BFFF;
+  /* Deep Sky Blue border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Padding for better spacing */
+  font-family: 'Merriweather', serif;
+  /* Use Merriweather font */
+  font-size: 16px;
+  /* Font size */
+  appearance: none;
+  /* Remove default arrow */
+  outline: none;
+  /* Remove default outline */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: border-color 0.3s, background-color 0.3s;
+  /* Smooth transitions */
+}
+
+/* Custom arrow for the select element */
+select::-ms-expand {
+  display: none;
+  /* Remove default arrow in IE */
+}
+
+/* Styles for the select element on focus */
+select:focus {
+  border-color: #009ACD;
+  /* Slightly darker blue on focus */
+  background-color: #2A2A2A;
+  /* Slightly lighter background on focus */
+}
+
+/* Styles for the dropdown options */
+option {
+  background-color: #1A1A1A;
+  /* Dark background for options */
+  color: #E0E0E0;
+  /* Light gray text color for options */
+}
+
+/* Optional: Hover effect for options */
+option:hover {
+  background-color: #00BFFF;
+  /* Deep Sky Blue background on hover */
+  color: #FFFFFF;
+  /* White text color on hover */
+}
+
+/* Styles for the range input */
+/* Slider container */
+.slider-container {
+  position: relative; /* To position tick marks */
+  margin: 20px 0; /* Spacing above and below the slider */
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Styles for the range input */
+input[type="range"] {
+  -webkit-appearance: none; /* Remove default appearance */
+  width: 100% !important; /* Full width */
+  height: 6px; /* Height of the slider */
+  background: #2A2A2A; /* Dark background for the slider track */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+}
+
+/* Styles for the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  border-radius: 50%; /* Round thumb */
+  background: #00BFFF; /* Deep Sky Blue color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  border-radius: 50%; /* Round thumb */
+  background: #00BFFF; /* Deep Sky Blue color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styles for the tick marks */
+.tickmarks {
+  position: relative; /* Positioning context for tick marks */
+  height: 20px; /* Height of the tick mark container */
+  margin-top: -20px; /* Adjust to align with slider */
+  /* width: 80%; */
+}
+
+.tickmarks span {
+  position: absolute; /* Position each tick mark */
+  font-size: 12px; /* Font size for the numbers */
+  color: #E0E0E0; /* Light gray text color */
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+} */
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgb(33, 150, 243);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgb(33, 150, 243);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+} */
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* radio button*//* Container for the radio buttons */
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Style for the label text */
+.radio-container label {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #FF6347;
+}
+
+/* Hide the default radio button */
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button */
+.radio-container input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #00BFFF;
+  border-radius: 50%;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checked state for custom radio button */
+.radio-container input[type="radio"]:checked + label::before {
+  background-color: #00BFFF;
+  border-color: #00BFFF;
+}
+
+/* Add a dot inside the selected radio button */
+.radio-container input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Hover and focus styles */
+.radio-container input[type="radio"]:hover + label::before,
+.radio-container input[type="radio"]:focus + label::before {
+  border-color: #007BFF;
+}
+
